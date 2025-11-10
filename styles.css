@@ -1,0 +1,320 @@
+/* LOGO – larger + stacked text for home */
+.logo-large {
+  gap: 10px;
+}
+
+.logo-text-block {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+.logo-text-main {
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+.logo-text-sub {
+  font-size: 0.7rem;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* HERO DASHBOARD */
+.hero-dashboard {
+  margin-top: 24px;
+}
+
+.hero-dashboard-main {
+  padding: 26px 24px 26px;
+}
+
+.hero-dashboard-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+
+.hero-dashboard-left {
+  flex: 1.5 1 260px;
+}
+
+.hero-dashboard-right {
+  flex: 1.2 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.hero-tag {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  color: #6b5c32;
+  margin: 0 0 8px;
+}
+
+.hero-dashboard-title {
+  margin: 0 0 8px;
+  font-size: clamp(1.7rem, 2.3vw, 2rem);
+  line-height: 1.2;
+}
+
+.hero-dashboard-title span {
+  color: #c39328;
+}
+
+.hero-dashboard-sub {
+  margin: 0;
+  font-size: 0.95rem;
+  max-width: 540px;
+}
+
+/* KPI boxes */
+.hero-kpi {
+  border-radius: 14px;
+  background: #ece3d2;
+  padding: 10px 12px;
+  font-size: 0.78rem;
+}
+
+.kpi-label {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 2px;
+}
+
+.kpi-value {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.kpi-note {
+  display: block;
+  margin-top: 2px;
+  opacity: 0.8;
+}
+
+.kpi-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.kpi-row > div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.kpi-chip {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+}
+
+.kpi-number {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* DASHBOARD ROW */
+.hero-dashboard-row {
+  display: grid;
+  grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.4fr);
+  gap: 18px;
+  margin-top: 14px;
+}
+
+/* MAIN PANEL */
+.hero-panel {
+  border-radius: 16px;
+  padding: 18px 16px;
+}
+
+.hero-panel-primary {
+  background: #faf4e7;
+}
+
+.hero-panel-header h2 {
+  margin: 0 0 2px;
+}
+
+.hero-panel-header p {
+  margin: 0 0 10px;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.hero-panel-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.hero-panel-column {
+  flex: 1 1 220px;
+}
+
+/* Progress bits */
+.panel-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.7;
+  margin: 0 0 4px;
+}
+
+.panel-main {
+  margin: 0;
+  font-weight: 600;
+}
+
+.panel-sub {
+  margin: 4px 0 10px;
+  font-size: 0.86rem;
+  opacity: 0.85;
+}
+
+.panel-progress-group {
+  margin-bottom: 10px;
+}
+
+.panel-progress-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 3px;
+}
+
+.panel-progress-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.07);
+  overflow: hidden;
+}
+
+.panel-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: #d1a945;
+}
+
+/* Pills */
+.hero-pill-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill-card {
+  flex: 1 1 140px;
+  border-radius: 12px;
+  background: #e3dccf;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+}
+
+.pill-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  opacity: 0.75;
+  margin: 0 0 4px;
+}
+
+.pill-main {
+  margin: 0;
+}
+
+.pill-row-small {
+  margin-top: 4px;
+}
+
+.pill-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  background: #f5eee1;
+}
+
+/* SIDE PANEL */
+.hero-panel-side {
+  background: #101a34;
+  color: #f7f1e5;
+}
+
+.hero-panel-side h3 {
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.side-text {
+  margin-top: 0;
+  font-size: 0.86rem;
+  opacity: 0.9;
+  margin-bottom: 10px;
+}
+
+.side-list {
+  padding-left: 18px;
+  margin: 0 0 10px;
+  font-size: 0.84rem;
+}
+
+/* QUICK ENTRY SECTION */
+.section-quick {
+  margin-top: 40px;
+}
+
+.quick-card h3 {
+  margin-top: 0;
+}
+
+.quick-sub {
+  margin: 2px 0 8px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b5c32;
+}
+
+.quick-list {
+  margin: 8px 0 12px;
+  padding-left: 18px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSIVE ADJUSTMENTS */
+@media (max-width: 900px) {
+  .hero-dashboard-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-dashboard-header {
+    flex-direction: column;
+  }
+
+  .logo-large {
+    width: 100%;
+  }
+}
