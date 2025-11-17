@@ -179,3 +179,68 @@ button:focus {
   border: 0;
   border-radius: 12px;
 }
+
+/* App feature bread buttons */
+
+.app-feature-grid {
+  margin-top: -0.5rem;
+}
+
+.bread-card {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border: none;
+  border-radius: 18px;
+  background-image: url("assets/squareBreadOutline.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border 0.15s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+}
+
+.bread-card span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+}
+
+.bread-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
+}
+
+.bread-card.active {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  border: 2px solid var(--dark);
+}
+
+/* Mini bullet rows under bread buttons */
+
+.mini-feature-list {
+  list-style: disc;
+  margin-left: 1.2rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Feature detail area */
+
+.feature-detail {
+  margin-top: 0.5rem;
+}
+
+.feature-detail .feature-panel {
+  /* only one shown at a time via JS (others get d-none) */
+}
