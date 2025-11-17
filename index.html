@@ -1,358 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Bread Head – Know Your Dough</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Bread Head is a teen-focused personal finance hub with lessons, a budgeting simulator, and a money journal. Know your dough before it controls you.">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Page title -->
+  <title>Bread Head – Home</title>
 
-  <!-- Bootstrap 5 CSS -->
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-    crossorigin="anonymous"
-  >
+  <!-- Description -->
+  <meta name="description" content="Bread Head is a youth-centered financial literacy platform built to help teens learn, budget, and reflect with confidence.">
 
-  <!-- Your custom styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icon_green.png">
+  <link rel="apple-touch-icon" href="assets/icon_green.png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bh-body">
+
+<body>
 
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg bh-navbar sticky-top">
+  <nav class="navbar navbar-expand-lg sticky-top" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
-        <span class="bh-logo-mark">BH</span>
-        <span class="d-flex flex-column lh-1">
-          <span class="bh-logo-text-main">Bread Head</span>
-          <span class="bh-logo-text-sub">Know your dough</span>
-        </span>
+      <!-- Brand: logo with text -->
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="assets/logo_w_text.png"
+             alt="Bread Head — Know Your Dough"
+             height="32"
+             style="max-width:200px;">
       </a>
 
-      <button class="navbar-toggler bh-navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon"></span>
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler border-0" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
       </button>
 
+      <!-- Nav links -->
       <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 bh-nav-links">
-          <li class="nav-item"><a class="nav-link active" href="#top">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="#app">App</a></li>
-          <li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-          <li class="nav-item"><a class="nav-link" href="app-features.html">All Features</a></li>
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+          <!-- ABOUT (dropdown) -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"
+               href="#"
+               id="aboutDropdown"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="aboutDropdown">
+              <li><a class="dropdown-item" href="team.html">Our Team</a></li>
+              <li><a class="dropdown-item" href="advisors.html">Advisors</a></li>
+            </ul>
+          </li>
+
+          <!-- MISSION -->
+          <li class="nav-item">
+            <a class="nav-link" href="mission.html">Mission</a>
+          </li>
+
+          <!-- BREAD HEAD APP -->
+          <li class="nav-item">
+            <a class="nav-link" href="app.html">Bread Head App</a>
+          </li>
+
+          <!-- COMMUNITY IMPACT / GOALS -->
+          <li class="nav-item">
+            <a class="nav-link" href="community.html">Community Impact / Goals</a>
+          </li>
+
+          <!-- CONTACT US -->
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+
         </ul>
       </div>
     </div>
   </nav>
 
-  <main id="top">
+  <!-- SECTION 1: HERO -->
+  <section class="hero py-5">
+    <div class="container py-4">
+      <div class="row align-items-center g-5">
 
-    <!-- HERO / BIG TILE -->
-    <section class="bh-hero py-5">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <!-- Left side text -->
-          <div class="col-lg-6">
-            <p class="bh-eyebrow mb-2">For teens who want to actually understand money</p>
-            <h1 class="bh-hero-title mb-3">
-              Know your dough<br>
-              <span class="bh-hero-highlight">before it runs your life.</span>
-            </h1>
-            <p class="bh-hero-sub mb-4">
-              Bread Head is a teen-built personal finance dashboard: short lessons, a budgeting simulator,
-              and a money journal that turns your habits into data you can learn from.
-            </p>
+        <!-- LEFT: TITLE + BULLETS + CTA -->
+        <div class="col-lg-6">
+          <p class="kicker mb-2">
+            Personal Finance Made Easy
+          </p>
 
-            <div class="d-flex flex-wrap gap-2 mb-4">
-              <a href="#app" class="btn bh-btn-primary">Explore the app</a>
-              <a href="about.html" class="btn bh-btn-outline-light">Why I built Bread Head</a>
-            </div>
+          <h1 class="display-3 fw-bold mb-1 hero-title">
+            Bread Head
+          </h1>
 
-            <div class="d-flex flex-wrap gap-3 bh-hero-metrics">
-              <div class="bh-metric">
-                <span class="bh-metric-number">3</span>
-                <span class="bh-metric-label">Core tools<br>Lessons · Budget · Journal</span>
-              </div>
-              <div class="bh-metric">
-                <span class="bh-metric-number">10–15</span>
-                <span class="bh-metric-label">Minutes per session</span>
-              </div>
-              <div class="bh-metric">
-                <span class="bh-metric-number">1</span>
-                <span class="bh-metric-label">Place to track progress</span>
-              </div>
-            </div>
+          <h2 class="h3 fw-semibold mb-4 hero-subtitle">
+            Know Your Dough
+          </h2>
+
+          <ul class="fs-5 mt-2 hero-bullets">
+            <li class="mb-3">
+              Youth-centered financial education taught through engaging short-form lessons
+            </li>
+            <li class="mb-3">
+              Financial tracking designed to promote self-awareness of financial habits
+            </li>
+            <li class="mb-3">
+              Interactive tool that empowers teens to turn reflection into practical and smart decisions
+            </li>
+          </ul>
+
+          <!-- Primary CTA -->
+          <a class="btn btn-darkgreen btn-lg w-100 py-3 mt-4 hero-primary-cta"
+             href="app.html">
+            Explore the app features →
+          </a>
+
+          <!-- Secondary CTA -->
+          <div class="d-flex gap-3 flex-wrap mt-4">
+            <a class="btn btn-outline-gold btn-lg" href="about.html">Learn More</a>
           </div>
+        </div>
 
-          <!-- Right side dashboard tile -->
-          <div class="col-lg-6">
-            <div class="bh-dashboard-tile shadow-lg">
-              <div class="d-flex justify-content-between align-items-center mb-3">
-                <div>
-                  <p class="bh-tag mb-1">App dashboard</p>
-                  <h2 class="bh-dashboard-title mb-0">Today’s money snapshot</h2>
-                </div>
-                <span class="bh-chip">Know your dough</span>
-              </div>
+        <!-- RIGHT: ICON CARD -->
+        <div class="col-lg-6">
+          <div class="card-contrast p-4 shadow-soft d-flex flex-column align-items-center text-center">
+            <img src="assets/icon_clear.png"
+                 alt="Bread Head bread-and-dollar icon"
+                 class="mb-3 hero-icon">
+            <p class="mb-1 fw-semibold text-uppercase small hero-pill">
+              Built by teens · For teens
+            </p>
+            <p class="mb-0">
+              A single place to learn, track, and reflect on your money — before it starts running your life.
+            </p>
+          </div>
+        </div>
 
-              <div class="row g-3 mb-3">
-                <div class="col-md-7">
-                  <div class="bh-panel">
-                    <p class="bh-panel-label mb-1">Current track</p>
-                    <p class="bh-panel-main mb-1">Unit 1 · Budget Basics</p>
-                    <p class="bh-panel-sub mb-3">
-                      “Every dollar gets a job.” Learn how to split income into needs, wants, and goals.
-                    </p>
+      </div>
+    </div>
+  </section>
 
-                    <div class="mb-3">
-                      <div class="d-flex justify-content-between small mb-1">
-                        <span>Lessons completed</span><span>68%</span>
-                      </div>
-                      <div class="progress bh-progress">
-                        <div class="progress-bar bh-progress-bar" role="progressbar" style="width: 68%;"></div>
-                      </div>
-                    </div>
+  <!-- SECTION 2: VIDEO WALKTHROUGH -->
+  <section id="video" class="py-5 video-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
 
-                    <div>
-                      <div class="d-flex justify-content-between small mb-1">
-                        <span>Budget sim comfort</span><span>52%</span>
-                      </div>
-                      <div class="progress bh-progress">
-                        <div class="progress-bar bh-progress-bar" role="progressbar" style="width: 52%;"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <!-- LEFT: VIDEO -->
+        <div class="col-lg-6">
+          <div class="ratio ratio-16x9 shadow-soft">
+            <iframe
+              src="https://www.youtube.com/embed/XtIu9S2z1Uc"
+              title="Bread Head walkthrough"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen></iframe>
+          </div>
+        </div>
 
-                <div class="col-md-5">
-                  <div class="bh-panel mb-2">
-                    <p class="bh-panel-label mb-1">Today’s micro-task</p>
-                    <p class="bh-panel-main mb-2">
-                      Move $20 from “Random” into “Savings · Future You”.
-                    </p>
-                  </div>
-                  <div class="bh-panel">
-                    <p class="bh-panel-label mb-1">Journal prompt</p>
-                    <p class="bh-panel-main mb-0">
-                      “What’s one impulse purchase you’d redo from this week?”
-                    </p>
-                  </div>
-                </div>
-              </div>
+        <!-- RIGHT: TEXT -->
+        <div class="col-lg-6">
+          <p class="kicker mb-2">Demo Walkthrough</p>
 
-              <div class="d-flex flex-wrap gap-2">
-                <span class="bh-pill">Lessons & curriculum</span>
-                <span class="bh-pill">Budget simulator</span>
-                <span class="bh-pill">Money journal</span>
-              </div>
+          <h2 class="section-title h1 mb-3">
+            See Bread Head in Action
+          </h2>
+
+          <p class="mb-4">
+            This short walkthrough starts with a quick intro, outlines the real financial problem Bread Head is built to solve, and then gives a clear, fast-paced tour of the app — lessons, budgeting, and journaling all in one place.
+          </p>
+
+          <ul class="fs-5 video-bullets">
+            <li class="mb-2 tick">
+              Learn the problem Bread Head tackles and why financial literacy matters for teens
+            </li>
+            <li class="mb-2 tick">
+              See how the app is structured across lessons, budgeting, and journaling
+            </li>
+            <li class="mb-2 tick">
+              Get a quick guided look at how users move through each core feature
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: THREE PILLARS -->
+  <section id="features" class="py-5">
+    <div class="container">
+      <p class="kicker mb-2">One hub · Three ways to know your dough</p>
+      <h2 class="section-title h1">Lessons · Budget Simulator · Money Journal</h2>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-4">
+          <div class="card-contrast h-100 p-4 shadow-soft">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h3 class="h5 fw-bold m-0">Lessons</h3>
+              <span class="badge bg-dark text-white">5–7 min</span>
             </div>
+            <p>Short slides with teen-real examples, interactive checks, and visual progress you can feel.</p>
+            <ul class="mb-3">
+              <li class="tick">Clear, bite-size modules</li>
+              <li class="tick">Instant feedback</li>
+              <li class="tick">Progress tracking</li>
+            </ul>
+            <a class="btn btn-outline-gold w-100" href="lessons.html">See the Lessons page →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-contrast h-100 p-4 shadow-soft">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h3 class="h5 fw-bold m-0">Budget Simulator</h3>
+              <span class="badge bg-dark text-white">Hands-on</span>
+            </div>
+            <p>Drag-and-drop dollars to test choices. See needs, wants, and saving adjust in real time.</p>
+            <ul class="mb-3">
+              <li class="tick">What-if scenarios</li>
+              <li class="tick">Recurring purchases</li>
+              <li class="tick">Goals &amp; tradeoffs</li>
+            </ul>
+            <a class="btn btn-outline-gold w-100" href="budget.html">Explore the Budget Sim →</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card-contrast h-100 p-4 shadow-soft">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <h3 class="h5 fw-bold m-0">Money Journal</h3>
+              <span class="badge bg-dark text-white">2–3 min</span>
+            </div>
+            <p>Prompts that build awareness and calm the chaos — because habits beat hacks.</p>
+            <ul class="mb-3">
+              <li class="tick">Weekly prompts</li>
+              <li class="tick">Pattern spotting</li>
+              <li class="tick">Wins &amp; redo’s</li>
+            </ul>
+            <a class="btn btn-outline-gold w-100" href="journal.html">Check out the Journal →</a>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- APP SECTION WITH TABS -->
-    <section id="app" class="py-5 bh-section-bg">
-      <div class="container">
-        <div class="mb-4 text-center">
-          <h2 class="bh-section-title mb-2">One hub. Three ways to know your dough.</h2>
-          <p class="bh-section-sub mb-0">
-            Use it like a dashboard: understand the concept, try it in the simulator, then reflect on what actually happened.
+  <!-- SECTION 4: CTA STRIP -->
+  <section class="py-5 cta-strip">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-8">
+          <h2 class="section-title h1 mb-2">
+            Ready to start? Spend 10 minutes with your money today.
+          </h2>
+          <p class="mb-0">
+            Open the app, take one lesson, make one budget move, write one line. That’s it.
           </p>
         </div>
-
-        <!-- Tabs -->
-        <ul class="nav nav-pills justify-content-center mb-4 bh-nav-pills" id="appTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="lessons-tab" data-bs-toggle="pill" data-bs-target="#lessons-pane" type="button" role="tab">
-              Lessons
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="budget-tab" data-bs-toggle="pill" data-bs-target="#budget-pane" type="button" role="tab">
-              Budget simulator
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="journal-tab" data-bs-toggle="pill" data-bs-target="#journal-pane" type="button" role="tab">
-              Money journal
-            </button>
-          </li>
-        </ul>
-
-        <div class="tab-content">
-          <!-- Lessons tab -->
-          <div class="tab-pane fade show active" id="lessons-pane" role="tabpanel">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6">
-                <div class="bh-card p-4">
-                  <h3 class="bh-card-title mb-2">Lessons · Understand the “why”</h3>
-                  <p class="mb-3">
-                    Short, focused slides that cover budgeting, saving, credit, debt, and more —
-                    with examples that actually match teen life instead of random textbook problems.
-                  </p>
-                  <ul class="bh-list">
-                    <li>6–12 slides per lesson so it doesn’t feel endless.</li>
-                    <li>Quick interactive checks so you know if it clicked.</li>
-                    <li>Visual progress across units and topics.</li>
-                  </ul>
-                  <a href="app-lessons.html" class="btn bh-btn-link mt-2">See the Lessons page →</a>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="bh-mockup-card p-4">
-                  <p class="bh-panel-label mb-1">Example lesson flow</p>
-                  <p class="mb-3 small text-muted">
-                    Budgeting · “Needs vs. Wants”
-                  </p>
-                  <ol class="bh-steps small mb-0">
-                    <li>Sort real teen expenses into “Need” vs “Want”.</li>
-                    <li>See how mislabeling changes your budget.</li>
-                    <li>Practice building a 50/30/20 style split.</li>
-                    <li>End with a reflection question you’ll see in the journal.</li>
-                  </ol>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Budget tab -->
-          <div class="tab-pane fade" id="budget-pane" role="tabpanel">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6 order-lg-2">
-                <div class="bh-card p-4">
-                  <h3 class="bh-card-title mb-2">Budget simulator · Practice with fake money</h3>
-                  <p class="mb-3">
-                    A sandbox where you can drag dollars into categories, test “what if I buy this every month?”,
-                    and watch your goals either happen or disappear.
-                  </p>
-                  <ul class="bh-list">
-                    <li>Set an income — job, allowance, side gigs.</li>
-                    <li>Add fixed costs like subscriptions and rides.</li>
-                    <li>See how much is truly left for wants and goals.</li>
-                  </ul>
-                  <a href="app-budget.html" class="btn bh-btn-link mt-2">Explore the Budget Sim →</a>
-                </div>
-              </div>
-              <div class="col-lg-6 order-lg-1">
-                <div class="bh-mockup-card p-4">
-                  <p class="bh-panel-label mb-2">Quick snapshot</p>
-                  <div class="d-flex justify-content-between small mb-2">
-                    <span>Income</span><strong>$1,200 / month</strong>
-                  </div>
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span>Needs</span><span>55%</span>
-                  </div>
-                  <div class="progress bh-progress mb-2">
-                    <div class="progress-bar bh-progress-bar" style="width: 55%;"></div>
-                  </div>
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span>Wants</span><span>23%</span>
-                  </div>
-                  <div class="progress bh-progress mb-2">
-                    <div class="progress-bar bh-progress-bar" style="width: 23%;"></div>
-                  </div>
-                  <div class="d-flex justify-content-between small mb-1">
-                    <span>Saving & goals</span><span>22%</span>
-                  </div>
-                  <div class="progress bh-progress mb-3">
-                    <div class="progress-bar bh-progress-bar" style="width: 22%;"></div>
-                  </div>
-                  <p class="small mb-0 text-muted">
-                    “Know your dough” means seeing where it actually goes — not where you wished it went.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Journal tab -->
-          <div class="tab-pane fade" id="journal-pane" role="tabpanel">
-            <div class="row g-4 align-items-center">
-              <div class="col-lg-6">
-                <div class="bh-card p-4">
-                  <h3 class="bh-card-title mb-2">Money journal · Notice your patterns</h3>
-                  <p class="mb-3">
-                    Not “dear diary.” Just honest, fast answers about how you feel and what you actually did
-                    with money this week.
-                  </p>
-                  <ul class="bh-list">
-                    <li>2–3 minute entries tied to your budget runs.</li>
-                    <li>Prompts about impulses, wins, and regrets.</li>
-                    <li>Turn vague anxiety into specific trends.</li>
-                  </ul>
-                  <a href="app-journal.html" class="btn bh-btn-link mt-2">Check out the Journal page →</a>
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="bh-mockup-card p-4">
-                  <p class="bh-panel-label mb-2">Sample prompts</p>
-                  <ul class="small mb-0 bh-list-plain">
-                    <li>“What purchase this week actually made your life better?”</li>
-                    <li>“Where did your dough go that you didn’t plan?”</li>
-                    <li>“What’s one tiny money habit you want Future You to thank you for?”</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
+        <div class="col-lg-4 text-lg-end">
+          <a class="btn btn-darkgreen btn-lg" href="app.html">Explore the app features</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- VIDEO SECTION -->
-    <section id="video" class="py-5">
-      <div class="container">
-        <div class="row g-4 align-items-center">
-          <div class="col-lg-6">
-            <h2 class="bh-section-title mb-3">See Bread Head in action</h2>
-            <p class="bh-section-sub mb-3">
-              A quick walkthrough of how the app looks and feels — from lessons to the budgeting simulator to the journal.
-            </p>
-            <ul class="bh-list">
-              <li>How the dashboard ties everything together.</li>
-              <li>What a typical lesson and budget run look like.</li>
-              <li>Where “Know your dough” shows up in the actual UI.</li>
-            </ul>
-          </div>
-          <div class="col-lg-6">
-            <div class="bh-card p-2">
-              <div class="ratio ratio-16x9">
-                <iframe
-                  src="https://www.youtube.com/embed/XtIu9S2z1Uc"
-                  title="Bread Head App Walkthrough"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <img src="assets/icon_clear.png" alt="" width="22" height="22">
+        <strong>Bread Head</strong>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="bh-footer py-3">
-    <div class="container text-center small">
-      <div>&copy; 2025 Bread Head. Know your dough.</div>
-      <div class="text-muted">Lessons · Budget simulator · Money journaling · Curriculum in progress</div>
+      <div class="small">
+        © 2025 Bread Head. <span class="ms-1">Know your dough.</span>
+      </div>
+      <nav class="small" aria-label="Footer">
+        <a class="me-3 text-decoration-none text-dark" href="lessons.html">Lessons</a>
+        <a class="me-3 text-decoration-none text-dark" href="budget.html">Budget Sim</a>
+        <a class="text-decoration-none text-dark" href="journal.html">Journal</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- Bootstrap JS (for navbar + tabs) -->
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"
-  ></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
-
