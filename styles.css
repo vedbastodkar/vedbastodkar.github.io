@@ -191,7 +191,7 @@ button:focus {
   aspect-ratio: 1 / 1;
   border: none;
   border-radius: 18px;
-  background-image: url("assets/squareBreadOutline.png");
+  background-image: url("Assets/squareBreadOutline.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
