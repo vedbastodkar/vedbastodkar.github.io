@@ -1,252 +1,7 @@
-:root {
-  --sage: #E6EDD9;
-  --dark: #1A2E1A;
-  --gold: #D1A945;
-  --ink: #0B140D;
-  --paper: #FAFCF7;
-}
+/* ================================
+   NAVBAR BUTTONS
+================================ */
 
-/* Base */
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-  color: var(--ink);
-  background: var(--paper);
-}
-
-/* Navbar */
-
-.navbar {
-  background: var(--dark);
-}
-
-.navbar .nav-link,
-.navbar-brand {
-  color: #fff !important;
-  font-weight: 600;
-}
-
-.navbar .nav-link.active,
-.navbar .nav-link:hover,
-.navbar .dropdown-item:hover {
-  color: var(--gold) !important;
-}
-
-.navbar .dropdown-menu {
-  font-size: 0.95rem;
-}
-
-/* Hero section */
-
-.hero {
-  background:
-    radial-gradient(80% 120% at 20% 0%, rgba(26, 46, 26, 0.25) 0%, rgba(26, 46, 26, 0) 60%),
-    linear-gradient(180deg, var(--sage) 0%, #f0f6e7 100%);
-  border-bottom: 4px solid var(--dark);
-}
-
-.hero-title {
-  color: var(--dark);
-  letter-spacing: -0.04em;
-}
-
-.hero-subtitle {
-  color: var(--ink);
-  opacity: 0.9;
-}
-
-.hero-bullets li {
-  list-style: disc;
-  margin-left: 1.2rem;
-  line-height: 1.6;
-}
-
-.hero-icon {
-  max-width: 220px;
-  width: 100%;
-  height: auto;
-}
-
-.hero-pill {
-  letter-spacing: 0.18em;
-  color: var(--dark);
-}
-
-.hero-primary-cta {
-  font-size: 1.25rem;
-  letter-spacing: -0.01em;
-}
-
-/* Video section */
-
-.video-section {
-  background: #ffffff;
-  border-bottom: 4px solid var(--dark);
-}
-
-.video-bullets {
-  line-height: 1.5;
-}
-
-/* Shared visual elements */
-
-.kicker {
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: var(--dark);
-  font-size: 0.85rem;
-}
-
-.section-title {
-  font-weight: 800;
-  letter-spacing: -0.02em;
-}
-
-.card-contrast {
-  background: #ffffff;
-  border: 2px solid var(--dark);
-  border-radius: 18px;
-}
-
-.shadow-soft {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-}
-
-.tick::before {
-  content: "✓";
-  font-weight: 800;
-  color: var(--dark);
-  margin-right: 0.5rem;
-}
-
-/* Buttons */
-
-.btn-darkgreen {
-  background: var(--dark);
-  color: #fff;
-  border: 2px solid var(--dark);
-}
-
-.btn-darkgreen:hover {
-  background: #102010;
-  border-color: #102010;
-  color: #fff;
-}
-
-.btn-outline-gold {
-  border: 2px solid var(--gold);
-  color: var(--dark);
-  background: transparent;
-}
-
-.btn-outline-gold:hover {
-  background: var(--gold);
-  color: #1A1400;
-}
-
-/* CTA strip */
-
-.cta-strip {
-  background: linear-gradient(180deg, #ffffff 0%, var(--sage) 100%);
-  border-top: 4px solid var(--dark);
-  border-bottom: 4px solid var(--dark);
-}
-
-/* Footer */
-
-footer {
-  border-top: 4px solid var(--dark);
-  background: var(--sage);
-}
-
-/* Forms, focus, accessibility */
-
-a:focus,
-button:focus {
-  outline: 3px solid var(--gold) !important;
-  outline-offset: 2px;
-}
-
-/* Embedded video */
-
-.ratio > iframe {
-  border: 0;
-  border-radius: 12px;
-}
-
-/* App feature bread buttons */
-
-.app-feature-grid {
-  margin-top: -0.5rem;
-}
-
-.bread-card {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border: none;
-  border-radius: 18px;
-  background-image: url("Assets/squareBreadOutline.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  position: relative;
-  cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border 0.15s ease;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
-}
-
-.bread-card span {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 1.1rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--dark);
-}
-
-.bread-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(0, 0, 0, 0.08);
-}
-
-.bread-card.active {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
-  border: 2px solid var(--dark);
-}
-
-/* Mini bullet rows under bread buttons */
-
-.mini-feature-list {
-  list-style: disc;
-  margin-left: 1.2rem;
-  margin-bottom: 0;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Feature detail area */
-
-.feature-detail {
-  margin-top: 0.5rem;
-}
-
-.feature-detail .feature-panel {
-  /* only one shown at a time via JS (others get d-none) */
-}
-
-/* Navbar buttons */
-/* Navbar buttons */
 .btn-nav {
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
@@ -262,21 +17,44 @@ button:focus {
   background-color: rgba(0, 0, 0, 0.04);
 }
 
-/* Active page (optional, manual class) */
+/* Active page state (optional) */
 .btn-nav.active {
   color: var(--gold);
   background-color: rgba(0, 0, 0, 0.06);
 }
 
-/* Primary nav button (Contact) */
+/* ================================
+   PRIMARY NAV BUTTON (CONTACT)
+================================ */
+
+/* Gold pill */
 .btn-nav-primary {
-  background-color: #1f6f5c; /* dark green */
-  color: #fff !important;
+  background-color: var(--gold);
+  color: #1f2937 !important;
 }
 
-/* Keep Contact green on hover */
+/* Hover / focus = slightly darker gold */
 .btn-nav-primary:hover,
 .btn-nav-primary:focus {
-  background-color: #155e4a;
-  color: #fff !important;
+  background-color: color-mix(in srgb, var(--gold) 85%, black);
+  color: #1f2937 !important;
+}
+
+/* ================================
+   DROPDOWN POLISH
+================================ */
+
+.navbar .dropdown-menu {
+  border-radius: 12px;
+  padding: 0.5rem 0;
+}
+
+.navbar .dropdown-item {
+  padding: 0.45rem 1rem;
+  font-weight: 500;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--gold);
 }
