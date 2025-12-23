@@ -1,60 +1,343 @@
-/* ================================
-   NAVBAR BUTTONS
-================================ */
+/* -----------------------------
+   THEME TOKENS
+------------------------------ */
+:root{
+  /* Brand */
+  --green: #1f6f5c;      /* dark green */
+  --green-2: #155e4a;    /* darker hover */
+  --gold: #c9a227;       /* warm gold */
+  --cream: #fbf7ef;      /* soft cream background */
+  --ink: #0f172a;        /* near-black text */
+  --slate: #334155;      /* secondary text */
+  --muted: #64748b;      /* muted text */
 
-.btn-nav {
+  /* Surfaces */
+  --paper: #ffffff;
+  --border: rgba(15,23,42,0.10);
+  --border-2: rgba(15,23,42,0.16);
+
+  /* Effects */
+  --shadow-soft: 0 14px 40px rgba(15,23,42,0.12);
+  --shadow-tight: 0 10px 24px rgba(15,23,42,0.10);
+
+  /* Radius + spacing */
+  --r-lg: 20px;
+  --r-md: 16px;
+  --r-sm: 12px;
+
+  /* Typography */
+  --container-max: 1120px;
+}
+
+/* -----------------------------
+   BASE
+------------------------------ */
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.5;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+a{
+  color: inherit;
+}
+
+.container{
+  max-width: var(--container-max);
+}
+
+/* Bootstrap sometimes makes buttons look slightly off with custom classes */
+.btn{
+  border-radius: 14px;
+}
+
+/* -----------------------------
+   NAVBAR
+------------------------------ */
+.navbar{
+  background: rgba(251,247,239,0.88); /* cream glass */
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+}
+
+.navbar .navbar-brand img{
+  display: block;
+}
+
+.navbar .dropdown-menu{
+  border-radius: 14px;
+  padding: 0.55rem 0;
+  border: 1px solid rgba(15,23,42,0.10);
+  box-shadow: var(--shadow-tight);
+  background: var(--paper);
+}
+
+.navbar .dropdown-item{
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.navbar .dropdown-item:hover,
+.navbar .dropdown-item:focus{
+  background: rgba(15,23,42,0.04);
+  color: var(--gold);
+}
+
+/* Navbar buttons */
+.btn-nav{
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  font-weight: 500;
-  color: #1f2937; /* dark slate */
-  transition: all 0.2s ease;
+  font-weight: 600;
+  color: rgba(15,23,42,0.78);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  border: 1px solid transparent;
 }
 
-/* Gold accent on hover / focus */
 .btn-nav:hover,
-.btn-nav:focus {
+.btn-nav:focus{
   color: var(--gold);
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(15,23,42,0.04);
 }
 
-/* Active page state (optional) */
-.btn-nav.active {
+.btn-nav.active{
   color: var(--gold);
-  background-color: rgba(0, 0, 0, 0.06);
+  background-color: rgba(15,23,42,0.06);
 }
 
-/* ================================
-   PRIMARY NAV BUTTON (CONTACT)
-================================ */
-
-/* Gold pill */
-.btn-nav-primary {
+/* Primary nav button (Contact) */
+.btn-nav-primary{
   background-color: var(--gold);
-  color: #1f2937 !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(15,23,42,0.10);
 }
 
-/* Hover / focus = slightly darker gold */
 .btn-nav-primary:hover,
-.btn-nav-primary:focus {
-  background-color: color-mix(in srgb, var(--gold) 85%, black);
-  color: #1f2937 !important;
+.btn-nav-primary:focus{
+  background-color: #b88f1f; /* slightly darker gold */
+  color: var(--ink) !important;
 }
 
-/* ================================
-   DROPDOWN POLISH
-================================ */
-
-.navbar .dropdown-menu {
-  border-radius: 12px;
-  padding: 0.5rem 0;
+/* -----------------------------
+   HERO
+------------------------------ */
+.hero{
+  background:
+    radial-gradient(1100px 420px at 20% 10%, rgba(201,162,39,0.16), transparent 55%),
+    radial-gradient(900px 420px at 85% 20%, rgba(31,111,92,0.18), transparent 55%),
+    linear-gradient(180deg, rgba(255,255,255,0.70), rgba(255,255,255,0.25));
+  border-bottom: 1px solid rgba(15,23,42,0.06);
 }
 
-.navbar .dropdown-item {
-  padding: 0.45rem 1rem;
-  font-weight: 500;
+.kicker{
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: rgba(15,23,42,0.62);
 }
 
-.navbar .dropdown-item:hover {
-  background-color: rgba(0, 0, 0, 0.04);
-  color: var(--gold);
+.hero-title{
+  letter-spacing: -0.03em;
+}
+
+.hero-subtitle{
+  color: rgba(15,23,42,0.80);
+}
+
+.hero-bullets{
+  padding-left: 1.2rem;
+  color: rgba(15,23,42,0.82);
+}
+
+.hero-bullets li{
+  margin-bottom: 0.75rem;
+}
+
+/* Hero icon sizing */
+.hero-icon{
+  width: 72px;
+  height: 72px;
+}
+
+/* Pill in the icon card */
+.hero-pill{
+  color: rgba(15,23,42,0.58);
+  letter-spacing: 0.08em;
+}
+
+/* -----------------------------
+   SECTIONS / TYPOGRAPHY
+------------------------------ */
+.section-title{
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+p{
+  color: rgba(15,23,42,0.78);
+}
+
+/* -----------------------------
+   CARDS / SURFACES
+------------------------------ */
+.card-contrast{
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(15,23,42,0.10);
+  border-radius: var(--r-lg);
+}
+
+.shadow-soft{
+  box-shadow: var(--shadow-soft);
+}
+
+/* -----------------------------
+   LIST TICKS (for .tick list items)
+------------------------------ */
+.tick{
+  position: relative;
+  list-style: none;
+  padding-left: 1.75rem;
+}
+
+.tick::before{
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0.05rem;
+  font-weight: 900;
+  color: var(--green);
+}
+
+/* Make any UL that uses ticks look clean */
+ul{
+  margin-bottom: 0;
+}
+
+/* -----------------------------
+   BUTTONS (custom)
+------------------------------ */
+.btn-darkgreen{
+  background: var(--green);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 16px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow: 0 10px 24px rgba(31,111,92,0.18);
+}
+
+.btn-darkgreen:hover,
+.btn-darkgreen:focus{
+  background: var(--green-2);
+  color: #fff;
+}
+
+.btn-outline-gold{
+  background: transparent;
+  color: var(--ink);
+  border: 1.5px solid rgba(201,162,39,0.65);
+  border-radius: 16px;
+  font-weight: 800;
+}
+
+.btn-outline-gold:hover,
+.btn-outline-gold:focus{
+  background: rgba(201,162,39,0.12);
+  border-color: rgba(201,162,39,0.85);
+  color: var(--ink);
+}
+
+/* -----------------------------
+   VIDEO SECTION (optional polish)
+------------------------------ */
+.video-section .ratio{
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid rgba(15,23,42,0.10);
+  background: #000;
+}
+
+/* -----------------------------
+   CTA STRIP
+------------------------------ */
+.cta-strip{
+  background:
+    radial-gradient(900px 420px at 10% 20%, rgba(31,111,92,0.18), transparent 55%),
+    radial-gradient(900px 420px at 90% 10%, rgba(201,162,39,0.18), transparent 55%),
+    rgba(255,255,255,0.55);
+  border-top: 1px solid rgba(15,23,42,0.06);
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+}
+
+/* -----------------------------
+   FOOTER
+------------------------------ */
+footer{
+  background: rgba(255,255,255,0.55);
+  border-top: 1px solid rgba(15,23,42,0.06);
+}
+
+footer .small a{
+  color: rgba(15,23,42,0.78);
+}
+
+footer .small a:hover{
+  color: var(--green);
+  text-decoration: underline;
+}
+
+/* -----------------------------
+   RESPONSIVE TUNING
+------------------------------ */
+@media (max-width: 991.98px){
+  .navbar .navbar-nav{
+    padding-top: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .btn-nav{
+    width: 100%;
+    text-align: left;
+  }
+
+  .btn-nav-primary{
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-icon{
+    width: 64px;
+    height: 64px;
+  }
+
+  .hero .display-3{
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 575.98px){
+  .hero .display-3{
+    font-size: 2.5rem;
+  }
+
+  .btn{
+    border-radius: 14px;
+  }
+
+  .card-contrast{
+    border-radius: 18px;
+  }
 }
