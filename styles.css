@@ -244,3 +244,27 @@ button:focus {
 .feature-detail .feature-panel {
   /* only one shown at a time via JS (others get d-none) */
 }
+
+/* Navbar buttons */
+.btn-nav {
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-weight: 500;
+  color: #1f2937; /* dark slate */
+  transition: background-color 0.2s ease;
+}
+
+.btn-nav:hover {
+  background-color: rgba(0,0,0,0.06);
+}
+
+/* Primary nav button (Contact) */
+.btn-nav-primary {
+  background-color: #1f6f5c; /* dark green */
+  color: #fff !important;
+}
+
+.btn-nav-primary:hover {
+  background-color: #155e4a;
+}
+
