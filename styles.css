@@ -246,16 +246,26 @@ button:focus {
 }
 
 /* Navbar buttons */
+/* Navbar buttons */
 .btn-nav {
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
   font-weight: 500;
   color: #1f2937; /* dark slate */
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
 }
 
-.btn-nav:hover {
-  background-color: rgba(0,0,0,0.06);
+/* Gold accent on hover / focus */
+.btn-nav:hover,
+.btn-nav:focus {
+  color: var(--gold);
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Active page (optional, manual class) */
+.btn-nav.active {
+  color: var(--gold);
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 /* Primary nav button (Contact) */
@@ -264,7 +274,9 @@ button:focus {
   color: #fff !important;
 }
 
-.btn-nav-primary:hover {
+/* Keep Contact green on hover */
+.btn-nav-primary:hover,
+.btn-nav-primary:focus {
   background-color: #155e4a;
+  color: #fff !important;
 }
-
