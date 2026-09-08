@@ -32,9 +32,8 @@ select:focus-visible,
     scroll-behavior: auto;
   }
 
-  /* Stop the infinite marquees dead. */
-  .animate-ticker,
-  .waterfall-scroll {
+  /* Stop the infinite marquee dead. */
+  .animate-ticker {
     animation: none !important;
   }
 
@@ -47,7 +46,6 @@ select:focus-visible,
   }
 
   /* Near-instant for the animation utilities/transforms this file defines. */
-  .waterfall-scroll,
   .source-pill,
   .footer-legal-link,
   .footer-social-icon {
@@ -103,7 +101,7 @@ select:focus-visible,
   }
 
   /*
-   * Card hover state — pillar cards and waterfall lesson cards.
+   * Card hover state — value / feature / lesson cards.
    * On hover: lift + subtle scale + green border tint + shadow.
    * Box-shadow only appears on hover (not a static decorative shadow).
    * On mouse-leave: springs back via same transition.
@@ -140,17 +138,6 @@ select:focus-visible,
   }
 }
 
-@keyframes waterfall {
-  0%   { transform: translateY(0); }
-  100% { transform: translateY(-50%); }
-}
-.waterfall-scroll {
-  animation: waterfall 20s linear infinite;
-}
-.waterfall-scroll:hover {
-  animation-play-state: paused;
-}
-
 @layer utilities {
   /* Source pill hover — dark fill, light text */
   .source-pill:hover {
@@ -169,17 +156,33 @@ select:focus-visible,
   /* Partners Why source link */
   .partners-source-link:hover { color: #4A5D4A !important; }
 
+  /* Source link on a dark section (§3 The Gap) */
+  .source-link-dark:hover { color: #D1A945 !important; }
+
   /* Partners submit button */
   .partners-submit-btn:hover:not(:disabled) { opacity: 0.88 !important; }
 
   /* Community partner band CTA */
   .pilot-partner-cta:hover { opacity: 0.88 !important; }
+
+  /* ── §2 Traction (homepage proof block) ── */
+  .traction-cta-gold:hover     { opacity: 0.88 !important; }
+  .traction-cta-ghost:hover    { background: rgba(26,46,26,0.05) !important; }
+  .traction-partners-link:hover { text-decoration: underline !important; }
+  .pilot-partner-compact:hover {
+    border-color: rgba(26,46,26,0.24) !important;
+    transform: translateY(-2px) !important;
+  }
+
+  /* ── §5 Partnership (homepage, dark) ── */
+  .partnership-cta-primary:hover { opacity: 0.88 !important; }
+  .partnership-cta-ghost:hover   { background: rgba(230,237,217,0.08) !important; }
 }
 
 @layer utilities {
   /*
    * SVG fractal-noise grain overlay — apply to dark sections only.
-   * (§5 Gamification, §8 Final CTA)
+   * (§5 Partnership, §7 Final CTA)
    * Sits above content via z-index:10 but pointer-events:none keeps it inert.
    */
   .grain-overlay {
@@ -231,41 +234,6 @@ select:focus-visible,
     line-height: 1.2 !important;
   }
 
-  /* ── Pillar cards — replace left border with top border ── */
-  .pillar-card {
-    border-left: none !important;
-    border-top: 3px solid #4A5D4A !important;
-  }
-  .pillar-ghost-num {
-    font-size: 32px !important;
-  }
-
-  /* ── Lessons section ── */
-  .lessons-layout {
-    flex-direction: column !important;
-  }
-  .lessons-left-col {
-    width: 100% !important;
-  }
-  .lessons-h2 {
-    font-size: clamp(24px, 6vw, 36px) !important;
-  }
-  .lessons-waterfall-wrap {
-    height: 400px !important;
-  }
-  .lesson-start-link {
-    display: flex !important;
-    align-items: center !important;
-    padding-top: 12px !important;
-    padding-bottom: 12px !important;
-    min-height: 44px !important;
-  }
-
-  /* ── Partners stat numbers ── */
-  .partners-stat-num {
-    font-size: 36px !important;
-  }
-
   /* ── Final CTA ── */
   .final-cta-h2 {
     font-size: clamp(28px, 7vw, 40px) !important;
@@ -305,35 +273,9 @@ select:focus-visible,
     padding: 24px !important;
   }
 
-  /* ── Achievements grid ── */
-  .achievements-grid {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 8px !important;
-  }
-  .achievement-badge {
-    padding: 8px 4px !important;
-    font-size: 10px !important;
-    text-align: center !important;
-    border-radius: 8px !important;
-  }
-
-  /* ── Journal icon size ── */
-  .journal-icon {
-    width: 28px !important;
-    height: 28px !important;
-    min-width: 28px !important;
-    min-height: 28px !important;
-  }
-
   /* ── Touch targets — minimum 44×44px ── */
   .touch-cta {
     min-height: 48px !important;
-  }
-
-  /* ── Why It Matters grid ── */
-  .why-grid {
-    grid-template-columns: 1fr !important;
   }
 
   /* ── Partners page ── */
@@ -359,9 +301,9 @@ select:focus-visible,
   .partners-type-num-block p:first-child {
     font-size: 48px !important;
   }
-  .partners-why-grid {
-    grid-template-columns: 1fr !important;
-    gap: 40px !important;
+  .partners-why-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 28px !important;
   }
   .partners-form-row {
     grid-template-columns: 1fr !important;
@@ -369,10 +311,64 @@ select:focus-visible,
 
   /* ── About page ── */
 
-  /* ── Award strip (homepage) ── */
-  .award-strip-inner {
+  /* ── §2 Traction (homepage proof block) ── */
+  .traction-award {
     grid-template-columns: 1fr !important;
     gap: 28px !important;
+  }
+  .traction-photo {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 10 !important;
+  }
+  .traction-partners-head {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+  .traction-facts {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+  .pilot-partner-compact-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .pilot-partner-compact {
+    padding: 20px !important;
+    gap: 18px !important;
+  }
+  .pilot-partner-compact-logo {
+    width: 104px !important;
+  }
+  .pilot-partner-compact-logo img {
+    max-width: 104px !important;
+    max-height: 56px !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* ── The Gap stat row (homepage) ── */
+  .problem-stats {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* ── §5 Partnership (homepage, dark) ── */
+  .partnership-head {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  /* Let the headline wrap naturally rather than at the desktop break. */
+  .partnership-head h2 br {
+    display: none !important;
+  }
+  .partnership-offer {
+    grid-template-columns: 1fr !important;
+  }
+  .partnership-cta-primary,
+  .partnership-cta-ghost {
+    width: 100% !important;
+    justify-content: center !important;
   }
 
   /* ── Pilot partner band ── */
@@ -524,6 +520,30 @@ select:focus-visible,
     max-width: 100% !important;
     width: 100% !important;
     display: flex !important;
+  }
+
+  /* ── §2 Traction — one column at tablet; the ceremony photo and the
+     citation both need more width than a 44/56 split leaves them. ── */
+  .traction-award {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .traction-photo {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9 !important;
+  }
+  .pilot-partner-compact-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* ── §5 Partnership — headline and pitch stack, offer stays two-up ── */
+  .partnership-head {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .partnership-offer {
+    column-gap: 40px !important;
   }
 }
 

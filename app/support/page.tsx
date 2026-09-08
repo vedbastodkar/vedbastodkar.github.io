@@ -30,24 +30,6 @@ export default function SupportPage() {
           }}
         >
           <FadeUp delay={0}>
-            {/* Eyebrow */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-              <div style={{ width: '2px', height: '20px', background: '#4A5D4A', flexShrink: 0 }} />
-              <span
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.13em',
-                  textTransform: 'uppercase',
-                  color: '#4A5D4A',
-                  lineHeight: 1,
-                }}
-              >
-                Get Help
-              </span>
-            </div>
-
             <h1
               style={{
                 fontFamily: 'var(--font-display)',

@@ -47,10 +47,6 @@ export default function FinalCTA() {
 
 
           {/* Eyebrow */}
-          <p className="font-body font-medium text-[11px] tracking-[0.13em] uppercase mb-8"
-             style={{ color: 'rgba(230,237,217,0.55)' }}>
-            Ready when you are
-          </p>
 
           {/* H2 — Playfair italic, accentGold — approved gold use */}
           <h2
@@ -62,8 +58,8 @@ export default function FinalCTA() {
 
           <p className="font-body text-[16px] leading-[1.7] mb-12 max-w-lg mx-auto"
              style={{ color: 'rgba(230,237,217,0.55)' }}>
-            Join thousands of teens building better money habits, one
-            5-minute lesson at a time.
+            95 lessons, a budget simulator, and a private journal. Free on the
+            App Store, or leave your email and we&apos;ll keep you posted.
           </p>
 
           {/* Email capture */}

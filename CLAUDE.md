@@ -46,18 +46,35 @@ The table above is the **marketing** surface. The **app** surface (auth-gated) a
 
 ## Section order — Homepage (`app/page.tsx`)
 
-1. `Hero` — bgSage (#E6EDD9)
-2. `Problem` — white
-3. `WhyItMatters` — dark (#1A2E1A)
-4. `Pillars` — bgSage
-5. `Ticker` — bgSage (seamless with Pillars)
-6. `LessonsPreview` — white
-7. `Gamification` — dark (#1A2E1A)
-8. `Journal` — bgSage
-9. `AwardStrip` — white (Congressional App Challenge teaser)
-10. `Partners` — bgSage
-11. `FinalCTA` — dark (#1A2E1A)
-12. `Footer`
+Narrative order: this is real → it has already won → real organisations already
+run it → here is the problem → here is the product → your organisation could be next.
+
+1. `Hero3D` — bgSage (#E6EDD9), 200vh scroll-tied barrel loop
+2. `Traction` — white (Congressional App Challenge win + program partners + facts)
+3. `Problem` — **dark (#1A2E1A)**, mission strip → bgSage
+4. `Ticker` — bgSage (thin band, continues the mission strip's sage)
+5. `LessonsScroll` — **white** (the product tour: Learn / Journal / Budget / Progress)
+6. `Partners` — dark (#1A2E1A) — the partnership value proposition
+7. `JoinTeamStrip` — **bgSage** (TEMPORARY recruiting strip)
+8. `FinalCTA` — dark (#1A2E1A)
+9. `Footer`
+
+**Background rhythm is a hard rule:** every neighbouring pair must differ, and two
+large blocks of the same colour must never end up adjacent. Sage → white → dark →
+sage → white → dark → sage → dark. Changing any section's background means
+re-checking its neighbours. Two long white sections in a row read as one dead
+block with no section boundary, and mission + ticker + a 4000px sage tour read as
+one endless green field — both were shipped bugs, fixed Sept 2026.
+
+**Removed in the Sept 2026 hierarchy pass** — do not re-add without a reason:
+- `WhyItMatters` — its stat grid restated `Problem`; the three tightest sourced
+  numbers now live inside `Problem`.
+- `Pillars` (Learn / Simulate / Reflect) — restated the `LessonsScroll` tour.
+- `Gamification` — restated the tour's "04 · Progress" block, and used XP / Level
+  wording the app itself does not use (the app has Crumbs, Behavior Score, Sandwich).
+- `AwardStrip` — replaced by `Traction`, which carries the award plus partners.
+- `Hero`, `LessonsPreview`, `Journal`, `XPBar` — already superseded by `Hero3D`
+  and `LessonsScroll`; deleted with the pass.
 
 ---
 
@@ -89,21 +106,18 @@ app/components/          # Shared/utility components
   PhoneParallax.tsx      # Phone mockup parallax (Hero)
   SmoothScroll.tsx       # Lenis smooth scroll init
   WordReveal.tsx         # Word-by-word reveal animation
-  XPBar.tsx              # XP progress bar (Gamification)
 
 components/sections/     # Full-width page sections
-  AwardStrip.tsx         # Compact homepage award recognition (white bg)
   CongressionalWin.tsx   # Full editorial award section (About page)
   FinalCTA.tsx           # Email signup CTA (dark bg)
-  Gamification.tsx       # XP / achievement section (dark bg)
-  Hero.tsx               # Homepage hero
-  Journal.tsx            # Journal / reflection section
-  LessonsPreview.tsx     # 10-unit curriculum waterfall
-  Partners.tsx           # Partner types + inquiry CTA
-  Pillars.tsx            # 3 product pillars
-  Problem.tsx            # Problem statement
+  Hero3D.tsx             # Homepage hero — scroll-tied 3D barrel loop
+  JoinTeamStrip.tsx      # TEMPORARY recruiting strip (homepage)
+  LessonsScroll.tsx      # Pinned four-screen product tour (the curriculum + app)
+  Partners.tsx           # Partnership value proposition + CTA (dark bg)
+  PilotPartner.tsx       # Program partner band — variant="compact" | "full"
+  Problem.tsx            # The Gap: statement + three sourced numbers + mission
   Ticker.tsx             # Scrolling curriculum ticker
-  WhyItMatters.tsx       # Data/stat bridge section
+  Traction.tsx           # Award + program partners + at-a-glance facts (white bg)
 
 app/about/
   AboutCTA.tsx           # CTA buttons (client component)
@@ -121,7 +135,7 @@ app/partners/
 | Token | Hex | Usage |
 |-------|-----|-------|
 | `brandGreen` | `#4A5D4A` | CTAs, primary accents — never on dark backgrounds |
-| `accentGold` | `#D1A945` | Gamification (§5) and Final CTA (§8) only |
+| `accentGold` | `#D1A945` | Partnership (§6) eyebrow and Final CTA (§8) only |
 | `textTitle` | `#1A2E1A` | Headlines and dark section backgrounds |
 | `bgSage` | `#E6EDD9` | Dominant page background |
 | `cardBg` | `#FFFFFF` | Card surfaces |
@@ -176,7 +190,15 @@ Mobile and tablet overrides live in `app/globals.css` using explicit class names
 
 **Projects:** mobile (375×812), tablet (768×1024), desktop (1440×900) — all Chromium.
 
-**Tests:** `tests/sections.spec.ts` — 7 tests × 3 viewports = 21 snapshots.
+**Tests:** `tests/sections.spec.ts` — 6 tests × 3 viewports = 18 snapshots.
+
+**Known pre-existing failures** (not caused by any recent change): `Nav` at all three
+viewports, `Team` at mobile + desktop, and `About full page` at all three. Playwright
+captures these as blank/partial — a capture-timing issue with the client components,
+present on a clean checkout. Do NOT blanket-run `npm run test:update` to "fix" them:
+that bakes a blank nav into the baseline and permanently hides real nav regressions.
+Regenerate only the snapshots you intentionally changed, by deleting those files and
+re-running (`updateSnapshots: 'missing'` recreates them).
 Snapshots: `tests/snapshots/sections.spec.ts-snapshots/`
 
 ```bash

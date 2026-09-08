@@ -99,19 +99,6 @@ export default function CongressionalWin() {
             </div>
 
             {/* Competition label */}
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontWeight: 600,
-                fontSize: '12px',
-                letterSpacing: '0.13em',
-                textTransform: 'uppercase',
-                color: 'rgba(245,240,232,0.45)',
-                margin: '0 0 14px',
-              }}
-            >
-              Congressional App Challenge · U.S. House of Representatives
-            </p>
 
             {/* Headline */}
             <h2

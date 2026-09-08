@@ -1,142 +1,206 @@
-// ── §7 Partners ─────────────────────────────────────────────────
-// bg: white (#FFFFFF)
-// Stat numbers: Playfair Display 700, 48px, textTitle
-// h2: Playfair bold (non-italic — formal/institutional tone)
-// Button: light-section style (softGreen bg, brandGreen text)
-// accentGold: NOT used here
-// Stat blocks wrapped in FadeUp (delays 0, 0.1): "5–9" static, 100% via CountUp
+// ── §6 Partnership ──────────────────────────────────────────────
+// bg: textTitle (#1A2E1A) — dark, so the partnership ask carries the same
+// visual weight as the product. accentGold (#D1A945) for the eyebrow only.
+// Buttons are bgSage-filled with dark text — brandGreen never sits on dark.
+//
+// This used to be a sage section of four partner-type cards, each ending in
+// its own "Get in touch" mailto — four competing CTAs, and a near-verbatim
+// duplicate of the four detailed rows on /partners. It now leads with what a
+// partner actually gets, names the four audiences in a single row, and ends
+// on one next step.
 
-import Link    from 'next/link'
-import FadeUp  from '@/app/components/FadeUp'
-import CountUp from '@/app/components/CountUp'
-import PilotPartner from './PilotPartner'
+import Link from 'next/link'
+import FadeUp from '@/app/components/FadeUp'
 
-const partnerTypes = [
+const OFFER = [
   {
-    number: '01',
-    label: 'Individual Students',
-    body: 'No school or program required. Any student can download Bread Head for free and start learning immediately, on any device, at any pace.',
+    title: 'The full app, free for every student',
+    body: 'No per-seat cost, no cost to families, no ads or upsells. Budget approval is not a prerequisite for getting started.',
   },
   {
-    number: '02',
-    label: 'Schools & Districts',
-    body: 'Integrate Bread Head into existing economics or life skills courses. Standards-aligned lessons, progress dashboards, and zero cost to students.',
+    title: '95 standards-aligned lessons',
+    body: 'Ten units, 3–5 minutes each, self-paced. Drops into an existing economics or life-skills course without new teacher training.',
   },
   {
-    number: '03',
-    label: 'Youth Organizations',
-    body: 'Bring financial literacy to after-school programs, summer camps, and community centers. Self-paced format works without a classroom structure.',
+    title: 'Progress dashboards for your staff',
+    body: 'See who has started, who is engaged, and how far each student has gotten, without chasing anyone for updates.',
   },
   {
-    number: '04',
-    label: 'Corporate & Foundation',
-    body: 'Fund access for underserved communities, sponsor a cohort, or partner to build curriculum around your financial products, responsibly.',
+    title: 'Outcomes you can report',
+    body: 'Participation and completion data your team can put straight into grant reporting and board updates.',
   },
+]
+
+const AUDIENCES = [
+  'Schools & districts',
+  'Youth organizations',
+  'Corporate & foundation',
+  'Individual students',
 ]
 
 export default function Partners() {
   return (
-    <section className="bg-bgSage">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
+    <section className="bg-textTitle grain-overlay" data-testid="partnership">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-24">
 
-        {/* Header row */}
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-24 items-end mb-10">
-          <div>
-            <p className="font-body font-medium text-[11px] tracking-[0.13em] uppercase text-brandGreen mb-2">
-              Institutional Grade
-            </p>
-            <h2
-              className="font-body font-bold text-textTitle tracking-[-0.02em] leading-[1.08]"
-              style={{ fontSize: 'clamp(36px, 4vw, 52px)' }}
-            >
-              Bringing Bread Head to every classroom.
-            </h2>
-          </div>
-          <div>
-            <p className="font-body text-[16px] leading-[1.7] mb-8"
-               style={{ color: 'rgba(26,46,26,0.65)' }}>
-              Bread Head is built to scale. Whether you represent a district,
-              a youth nonprofit, or a foundation, we want to bring this to
-              every teen who needs it, regardless of zip code.
-            </p>
-            {/* Light-section CTA button */}
-            <Link
-              href="/partners"
-              className="inline-flex items-center gap-2 font-body font-medium text-brandGreen rounded-full"
-              style={{
-                background: 'rgba(74,93,74,0.10)',
-                border: '1px solid rgba(74,93,74,0.25)',
-                padding: '12px 28px',
-                fontSize: '14px',
-                textDecoration: 'none',
-              }}
-            >
-              Partner with Bread Head →
-            </Link>
-          </div>
-        </div>
+        {/* Header */}
+        <FadeUp delay={0}>
+          <div
+            className="partnership-head"
+            style={{
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '64px',
+              alignItems: 'end',
+              marginBottom: '56px',
+            }}
+          >
+            <div>
+              <h2
+                className="font-body font-bold tracking-[-0.02em] leading-[1.06]"
+                style={{ fontSize: 'clamp(36px, 4.4vw, 56px)', color: '#E6EDD9' }}
+              >
+                Your organization
+                <br />
+                could be next.
+              </h2>
+            </div>
 
-        {/* Stats row — Playfair 700 48px per spec */}
-        <div
-          className="grid grid-cols-2 gap-8 lg:gap-16 mb-10 pb-10 max-w-xl"
-          style={{ borderBottom: '0.5px solid rgba(26,46,26,0.10)' }}
-        >
-          {/* 5–9 — static (range, not a number) */}
-          <FadeUp delay={0}>
             <div>
               <p
-                className="partners-stat-num font-display font-bold text-textTitle leading-none mb-3"
-                style={{ fontSize: '48px' }}
+                className="font-body text-[16px] leading-[1.75] mb-8"
+                style={{ color: 'rgba(230,237,217,0.62)' }}
               >
-                5–9
+                Breakthrough Twin Cities and the Young Kings &amp; Queens Foundation
+                already put Bread Head in front of their students. If you run a
+                classroom, a program, or a fund that reaches teenagers, we can do the
+                same for you, at no cost to the young people you serve.
               </p>
-              <p className="font-body text-[13px]"
-                 style={{ color: 'rgba(26,46,26,0.50)' }}>
-                minutes per lesson
-              </p>
+
+              <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+                <Link
+                  href="/partners"
+                  className="partnership-cta-primary"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontWeight: 700,
+                    fontSize: '15px',
+                    color: '#1A2E1A',
+                    background: '#E6EDD9',
+                    textDecoration: 'none',
+                    padding: '14px 30px',
+                    borderRadius: '100px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    minHeight: '48px',
+                    boxSizing: 'border-box',
+                    transition: 'opacity 0.15s ease',
+                  }}
+                >
+                  Partner with Bread Head →
+                </Link>
+                <a
+                  href="mailto:partners@bread-head.org"
+                  className="partnership-cta-ghost"
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontWeight: 600,
+                    fontSize: '15px',
+                    color: '#E6EDD9',
+                    background: 'transparent',
+                    border: '1px solid rgba(230,237,217,0.28)',
+                    textDecoration: 'none',
+                    padding: '14px 30px',
+                    borderRadius: '100px',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    minHeight: '48px',
+                    boxSizing: 'border-box',
+                    transition: 'background 0.15s ease',
+                  }}
+                >
+                  Email us
+                </a>
+              </div>
             </div>
-          </FadeUp>
+          </div>
+        </FadeUp>
 
-          {/* 100% — CountUp */}
-          <FadeUp delay={0.1}>
-            <div>
-              <CountUp target={100} suffix="%" className="partners-stat-num font-display font-bold text-textTitle leading-none" style={{ fontSize: '48px' }} />
-              <p className="font-body text-[13px] mt-3"
-                 style={{ color: 'rgba(26,46,26,0.50)' }}>
-                free for students
-              </p>
-            </div>
-          </FadeUp>
-        </div>
-
-        {/* Pilot partner proof */}
-        <div className="mb-10">
-          <PilotPartner />
-        </div>
-
-        {/* Partner type columns — white cards on sage */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
-          {partnerTypes.map((p) => (
-            <div key={p.label} className="bg-cardBg card-border rounded-2xl p-7 flex flex-col">
-              <span className="font-body font-bold text-brandGreen text-[13px] mb-4">
-                {p.number}
-              </span>
-              <h3 className="font-body font-semibold text-textTitle text-[20px] leading-snug mb-3">
-                {p.label}
-              </h3>
-              <p className="font-body text-[14px] leading-[1.7] flex-1"
-                 style={{ color: 'rgba(26,46,26,0.60)' }}>
-                {p.body}
-              </p>
-              <a
-                href="mailto:partners@bread-head.org"
-                className="font-body font-medium text-brandGreen text-[13px] mt-5 hover:underline inline-flex items-center gap-1"
+        {/* What a partner gets */}
+        <div
+          className="partnership-offer"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            columnGap: '64px',
+            rowGap: '0',
+          }}
+        >
+          {OFFER.map((o, i) => (
+            <FadeUp key={o.title} delay={i * 0.06}>
+              <div
+                style={{
+                  paddingTop: '28px',
+                  paddingBottom: '28px',
+                  borderTop: '1px solid rgba(230,237,217,0.12)',
+                }}
               >
-                Get in touch →
-              </a>
-            </div>
+                <h3
+                  className="font-body font-semibold text-[19px] leading-[1.3] mb-2"
+                  style={{ color: '#E6EDD9' }}
+                >
+                  {o.title}
+                </h3>
+                <p
+                  className="font-body text-[14px] leading-[1.7]"
+                  style={{ color: 'rgba(230,237,217,0.55)', maxWidth: '460px' }}
+                >
+                  {o.body}
+                </p>
+              </div>
+            </FadeUp>
           ))}
         </div>
+
+        {/* Who we work with */}
+        <FadeUp delay={0}>
+          <div
+            className="partnership-audiences"
+            style={{
+              marginTop: '24px',
+              paddingTop: '28px',
+              borderTop: '1px solid rgba(230,237,217,0.12)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '20px',
+              flexWrap: 'wrap',
+            }}
+          >
+            <span
+              className="font-body font-semibold text-[11px] tracking-[0.13em] uppercase"
+              style={{ color: 'rgba(230,237,217,0.40)' }}
+            >
+              We work with
+            </span>
+            <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+              {AUDIENCES.map((a) => (
+                <span
+                  key={a}
+                  className="font-body font-medium text-[13.5px]"
+                  style={{
+                    color: 'rgba(230,237,217,0.78)',
+                    border: '1px solid rgba(230,237,217,0.20)',
+                    borderRadius: '100px',
+                    padding: '8px 16px',
+                    whiteSpace: 'nowrap',
+                  }}
+                >
+                  {a}
+                </span>
+              ))}
+            </div>
+          </div>
+        </FadeUp>
 
       </div>
     </section>

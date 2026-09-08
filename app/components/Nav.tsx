@@ -108,7 +108,7 @@ export default function Nav() {
         {/* Logo */}
         <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
           <Image
-            src="/assets/logo_w_text.png"
+            src="/assets/logo_clear_w_text.png"
             alt="Bread Head"
             width={163}
             height={44}

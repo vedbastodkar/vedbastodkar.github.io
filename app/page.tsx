@@ -1,25 +1,31 @@
 // ── Marketing home page ─────────────────────────────────────────
-// Section background rhythm:
+// Narrative order: this is real → it has already won → real organisations
+// already run it → here is the problem → here is the product → your
+// organisation could be next.
+//
+// Section background rhythm — every neighbouring pair differs, so each
+// section reads as its own block. Do not let two large blocks of the same
+// colour end up adjacent:
 //   §1 Hero         → bgSage  (#E6EDD9)
-//   §2 Problem      → white   (#FFFFFF)
-//   §2b WhyItMatters→ white   (#FFFFFF)  ← data bridge after Problem
-//   §3 Pillars      → bgSage  (#E6EDD9)
-//   — Ticker strip  → bgSage  (seamless extension of §3)
-//   §4 Lessons      → white   (#FFFFFF)
-//   §5 Gamification → dark    (#1A2E1A)  ← accentGold approved
-//   §6 Journal      → bgSage  (#E6EDD9)
-//   §7 Partners     → bgSage  (#E6EDD9)
-//   §7b JoinTeam    → white   (#FFFFFF)  ← TEMPORARY recruiting strip
-//   §8 Final CTA    → dark    (#1A2E1A)  ← accentGold headline
+//   §2 Traction     → white   (#FFFFFF)  ← award + program partners + facts
+//   §3 Problem      → dark    (#1A2E1A)  ← accentGold eyebrow + stat figures
+//   — mission strip → bgSage  (#E6EDD9)  ← inside Problem
+//   — Ticker strip  → bgSage  (#E6EDD9)  ← thin band, continues the sage
+//   §4 Lessons      → white   (#FFFFFF)  ← the product itself
+//   §5 Partnership  → dark    (#1A2E1A)  ← accentGold eyebrow
+//   §6 JoinTeam     → bgSage  (#E6EDD9)  ← TEMPORARY recruiting strip
+//   §7 Final CTA    → dark    (#1A2E1A)  ← accentGold headline
+//
+// Removed (Sept 2026, hierarchy pass): the standalone WhyItMatters stat grid
+// (folded into Problem), Pillars (Learn/Simulate/Reflect — restated the
+// LessonsScroll tour), and Gamification (restated the tour's "04 · Progress"
+// block, using XP/Level wording the app itself does not use).
 
 import Hero3D         from '@/components/sections/Hero3D'
+import Traction       from '@/components/sections/Traction'
 import Problem        from '@/components/sections/Problem'
-import WhyItMatters  from '@/components/sections/WhyItMatters'
-import Pillars        from '@/components/sections/Pillars'
 import Ticker         from '@/components/sections/Ticker'
 import LessonsScroll  from '@/components/sections/LessonsScroll'
-import Gamification   from '@/components/sections/Gamification'
-import AwardStrip     from '@/components/sections/AwardStrip'
 import Partners       from '@/components/sections/Partners'
 import JoinTeamStrip  from '@/components/sections/JoinTeamStrip'
 import FinalCTA       from '@/components/sections/FinalCTA'
@@ -29,13 +35,10 @@ export default function Home() {
   return (
     <main>
       <Hero3D />
+      <Traction />
       <Problem />
-      <WhyItMatters bg="#1A2E1A" />
-      <AwardStrip />
-      <Pillars />
       <Ticker />
       <LessonsScroll />
-      <Gamification />
       <Partners />
       <JoinTeamStrip />
       <FinalCTA />

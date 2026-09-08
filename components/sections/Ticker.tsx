@@ -1,5 +1,6 @@
-// ── Ticker — full-width CSS marquee between §3 Pillars and §4 Lessons ──
-// bgSage background (seamlessly extends Pillars' sage).
+// ── Ticker — full-width CSS marquee leading into §4 Lessons ────
+// bgSage background — carries the sage of the mission strip above it into
+// the white curriculum tour below, so it reads as the transition band.
 // Pure CSS animation — no JS, no Framer Motion.
 // Duplicate spans ensure the loop is seamless at any viewport width.
 

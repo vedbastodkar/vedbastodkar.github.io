@@ -75,8 +75,8 @@ const PARTNER_TYPES = [
 // ── Why It Matters stats ──────────────────────────────────────────
 const WHY_STATS = [
   {
-    number: 'More than 1 in 3',
-    label: 'dollars of wealth inequality traced to financial knowledge gaps',
+    number: '1 in 3',
+    label: 'More than a third of U.S. wealth inequality traces to financial knowledge gaps',
     source: 'https://pensionresearchcouncil.wharton.upenn.edu/wp-content/uploads/2015/08/WP2015-01.pdf',
   },
   {
@@ -120,24 +120,6 @@ export default function PartnersPage() {
           {/* Left: text */}
           <div style={{ flex: '0 0 55%', maxWidth: '55%' }} className="partners-hero-text">
             <FadeUp delay={0}>
-              {/* Eyebrow with green bar */}
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '20px' }}>
-                <div style={{ width: '2px', height: '20px', background: '#4A5D4A', flexShrink: 0 }} />
-                <span
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontWeight: 600,
-                    fontSize: '11px',
-                    letterSpacing: '0.13em',
-                    textTransform: 'uppercase',
-                    color: '#4A5D4A',
-                    lineHeight: 1,
-                  }}
-                >
-                  Institutional Grade
-                </span>
-              </div>
-
               <h1
                 style={{
                   fontFamily: 'var(--font-display)',
@@ -163,8 +145,10 @@ export default function PartnersPage() {
                   marginBottom: '32px',
                 }}
               >
-                Whether you represent a school district, a youth nonprofit, or a
-                corporate foundation, Bread Head is built to scale with you.
+                Breakthrough Twin Cities and the Young Kings &amp; Queens Foundation
+                already run Bread Head with their students. Whether you represent a
+                school district, a youth nonprofit, or a corporate foundation, the
+                app arrives free and ready to use.
               </p>
 
               {/* CTA buttons */}
@@ -214,46 +198,124 @@ export default function PartnersPage() {
             </FadeUp>
           </div>
 
-          {/* Right: stat cards */}
-          <div style={{ flex: '0 0 45%', maxWidth: '45%', display: 'flex', flexDirection: 'column', gap: '16px' }} className="partners-hero-stats">
+          {/* Right: proof card — the award, then the three facts a partner
+              needs before they will take a meeting. Replaced a lone "100%"
+              tile that carried no credibility of its own. */}
+          <div style={{ flex: '0 0 45%', maxWidth: '45%' }} className="partners-hero-stats">
             <FadeUp delay={0.1}>
-              {[
-                { number: '100%', label: 'free for students, always' },
-              ].map((s) => (
-                <div
-                  key={s.number}
+              <div
+                style={{
+                  background: '#FFFFFF',
+                  border: '0.5px solid rgba(26,46,26,0.10)',
+                  borderRadius: '20px',
+                  padding: '28px',
+                  boxShadow: '0 12px 40px rgba(26,46,26,0.08)',
+                }}
+              >
+                {/* Award */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '14px' }}>
+                  <span
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '7px',
+                      fontFamily: 'var(--font-body)',
+                      fontWeight: 700,
+                      fontSize: '10.5px',
+                      letterSpacing: '0.14em',
+                      textTransform: 'uppercase',
+                      color: '#B8922A',
+                      background: 'rgba(193,154,50,0.09)',
+                      border: '1px solid rgba(193,154,50,0.25)',
+                      borderRadius: '100px',
+                      padding: '5px 12px',
+                    }}
+                  >
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden>
+                      <path d="M6 0l1.35 3.9H11l-3 2.2 1.14 3.9L6 7.9l-3.14 2.1L4 6.1 1 3.9h3.65L6 0z" fill="#B8922A" />
+                    </svg>
+                    2025 Winner · MN-05
+                  </span>
+                </div>
+
+                <p
                   style={{
-                    background: '#FFFFFF',
-                    border: '0.5px solid rgba(26,46,26,0.10)',
-                    borderRadius: '16px',
-                    padding: '24px 28px',
+                    fontFamily: 'var(--font-display)',
+                    fontStyle: 'italic',
+                    fontWeight: 700,
+                    fontSize: 'clamp(20px, 2.2vw, 26px)',
+                    color: '#1A2E1A',
+                    lineHeight: 1.2,
+                    margin: '0 0 8px',
                   }}
                 >
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontWeight: 700,
-                      fontSize: '52px',
-                      color: '#1A2E1A',
-                      lineHeight: 1,
-                      marginBottom: '6px',
-                    }}
+                  Winner of the Congressional App Challenge.
+                </p>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '14px',
+                    color: 'rgba(26,46,26,0.6)',
+                    lineHeight: 1.65,
+                    margin: '0 0 20px',
+                  }}
+                >
+                  The national student technology competition run by the U.S. House
+                  of Representatives.{' '}
+                  <a
+                    href="https://www.congressionalappchallenge.us/25-MN05/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="partners-source-link"
+                    style={{ color: '#4A5D4A', fontWeight: 600, textDecoration: 'none' }}
                   >
-                    {s.number}
-                  </p>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontWeight: 400,
-                      fontSize: '13px',
-                      color: 'rgba(26,46,26,0.5)',
-                      margin: 0,
-                    }}
-                  >
-                    {s.label}
-                  </p>
+                    Official listing ↗
+                  </a>
+                </p>
+
+                {/* Facts */}
+                <div
+                  style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(3, 1fr)',
+                    gap: '16px',
+                    paddingTop: '20px',
+                    borderTop: '1px solid rgba(26,46,26,0.10)',
+                  }}
+                >
+                  {[
+                    { k: '100%', v: 'free for students' },
+                    { k: '95', v: 'lessons, 10 units' },
+                    { k: '501(c)(3)', v: 'nonprofit' },
+                  ].map((f) => (
+                    <div key={f.k}>
+                      <p
+                        style={{
+                          fontFamily: 'var(--font-display)',
+                          fontWeight: 700,
+                          fontSize: 'clamp(19px, 2vw, 24px)',
+                          color: '#1A2E1A',
+                          lineHeight: 1.1,
+                          margin: '0 0 4px',
+                        }}
+                      >
+                        {f.k}
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '12px',
+                          color: 'rgba(26,46,26,0.5)',
+                          lineHeight: 1.4,
+                          margin: 0,
+                        }}
+                      >
+                        {f.v}
+                      </p>
+                    </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </FadeUp>
           </div>
         </div>
@@ -264,20 +326,6 @@ export default function PartnersPage() {
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 32px 72px' }}>
           <FadeUp delay={0}>
             <div style={{ marginBottom: '28px' }}>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.13em',
-                  textTransform: 'uppercase',
-                  color: '#4A5D4A',
-                  margin: '0 0 16px',
-                  lineHeight: 1,
-                }}
-              >
-                Community Partners
-              </p>
 
               <h2
                 style={{
@@ -287,6 +335,7 @@ export default function PartnersPage() {
                   color: '#1A2E1A',
                   lineHeight: 1.15,
                   margin: '0 0 12px',
+                  maxWidth: '820px',
                 }}
               >
                 The organizations putting Bread Head in front of students.
@@ -325,23 +374,6 @@ export default function PartnersPage() {
           }}
         >
           <FadeUp delay={0}>
-            {/* Eyebrow */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.13em',
-                  textTransform: 'uppercase',
-                  color: '#D1A945',
-                  margin: 0,
-                  lineHeight: 1,
-                }}
-              >
-                Who We Work With
-              </p>
-            </div>
 
             <h2
               style={{
@@ -388,20 +420,6 @@ export default function PartnersPage() {
                       }}
                     >
                       {p.number}
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 600,
-                        fontSize: '11px',
-                        letterSpacing: '0.13em',
-                        textTransform: 'uppercase',
-                        color: '#D1A945',
-                        lineHeight: 1,
-                        margin: 0,
-                      }}
-                    >
-                      {p.title}
                     </p>
                   </div>
 
@@ -600,34 +618,18 @@ export default function PartnersPage() {
       </section>
 
       {/* ── WHY IT MATTERS ──────────────────────────────────────── */}
+      {/* Condensed from a four-stat column plus three paragraphs. The same
+          numbers already carry the argument on the homepage; here they run as
+          one row so the page stays about the partnership, not the problem. */}
       <section id="why" style={{ background: '#FFFFFF' }}>
         <div
           style={{
             maxWidth: '1200px',
             margin: '0 auto',
-            paddingTop: '80px',
-            paddingBottom: '80px',
-            paddingLeft: '32px',
-            paddingRight: '32px',
+            padding: '80px 32px',
           }}
         >
           <FadeUp delay={0}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.13em',
-                  textTransform: 'uppercase',
-                  color: '#4A5D4A',
-                  margin: 0,
-                  lineHeight: 1,
-                }}
-              >
-                Why It Matters
-              </p>
-            </div>
 
             <h2
               style={{
@@ -636,106 +638,87 @@ export default function PartnersPage() {
                 fontSize: 'clamp(26px, 3vw, 40px)',
                 color: '#1A2E1A',
                 lineHeight: 1.15,
-                marginBottom: 0,
+                margin: '0 0 16px',
+                maxWidth: '760px',
               }}
             >
-              The gap is real. The solution is ready.
+              Financial illiteracy isn&apos;t a personal failing. It&apos;s a systemic gap.
             </h2>
 
-            <div
-              className="partners-why-grid"
+            <p
               style={{
-                display: 'grid',
-                gridTemplateColumns: '45fr 55fr',
-                gap: '64px',
-                marginTop: '48px',
-                alignItems: 'flex-start',
+                fontFamily: 'var(--font-body)',
+                fontSize: '16px',
+                color: 'rgba(26,46,26,0.65)',
+                lineHeight: 1.75,
+                margin: 0,
+                maxWidth: '720px',
               }}
             >
-              {/* Left: stats */}
-              <div>
-                {WHY_STATS.map((s, i) => (
-                  <div
-                    key={s.number}
+              The teenagers who struggle most with money in their twenties weren&apos;t
+              irresponsible. They were never taught. Closing that gap at scale takes
+              institutional partners, and every partnership widens who gets reached.
+            </p>
+
+            <div
+              className="partners-why-row"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4, 1fr)',
+                gap: '40px',
+                marginTop: '56px',
+                paddingTop: '40px',
+                borderTop: '1px solid rgba(26,46,26,0.12)',
+              }}
+            >
+              {WHY_STATS.map((s) => (
+                <div key={s.number}>
+                  <p
                     style={{
-                      paddingBottom: i < WHY_STATS.length - 1 ? '32px' : '0',
-                      marginBottom: i < WHY_STATS.length - 1 ? '32px' : '0',
-                      borderBottom:
-                        i < WHY_STATS.length - 1
-                          ? '0.5px solid rgba(26,46,26,0.08)'
-                          : 'none',
+                      fontFamily: 'var(--font-display)',
+                      fontWeight: 700,
+                      fontStyle: 'italic',
+                      fontSize: 'clamp(26px, 2.6vw, 36px)',
+                      color: '#4A5D4A',
+                      lineHeight: 1.1,
+                      margin: '0 0 12px',
                     }}
                   >
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-display)',
-                        fontWeight: 700,
-                        fontSize: 'clamp(32px, 3.5vw, 48px)',
-                        color: '#4A5D4A',
-                        lineHeight: 1,
-                        marginBottom: '8px',
-                      }}
-                    >
-                      {s.number}
-                    </p>
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 400,
-                        fontSize: '14px',
-                        color: 'rgba(26,46,26,0.6)',
-                        lineHeight: 1.5,
-                        marginBottom: '6px',
-                      }}
-                    >
-                      {s.label}
-                    </p>
-                    <a
-                      href={s.source}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="partners-source-link"
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontWeight: 400,
-                        fontSize: '11px',
-                        color: 'rgba(26,46,26,0.3)',
-                        textDecoration: 'none',
-                        transition: 'color 0.15s ease',
-                      }}
-                    >
-                      Source ↗
-                    </a>
-                  </div>
-                ))}
-              </div>
-
-              {/* Right: paragraphs */}
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                {[
-                  "Financial illiteracy isn't a personal failing. It's a systemic gap. The teenagers who struggle most with money in their twenties weren't irresponsible. They were just never taught.",
-                  "Bread Head exists to close that gap at scale. And we can only do that with institutional partners who believe the same thing.",
-                  "Every partnership directly funds expanded access for students who can't afford to learn these lessons the hard way.",
-                ].map((text, i) => (
+                    {s.number}
+                  </p>
                   <p
-                    key={i}
                     style={{
                       fontFamily: 'var(--font-body)',
-                      fontWeight: 400,
-                      fontSize: '15px',
-                      color: 'rgba(26,46,26,0.65)',
-                      lineHeight: 1.75,
-                      margin: 0,
+                      fontSize: '13.5px',
+                      color: 'rgba(26,46,26,0.6)',
+                      lineHeight: 1.6,
+                      margin: '0 0 8px',
                     }}
                   >
-                    {text}
+                    {s.label}
                   </p>
-                ))}
-              </div>
+                  <a
+                    href={s.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="partners-source-link"
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '11px',
+                      color: 'rgba(26,46,26,0.3)',
+                      textDecoration: 'none',
+                      transition: 'color 0.15s ease',
+                    }}
+                  >
+                    Source ↗
+                  </a>
+                </div>
+              ))}
             </div>
           </FadeUp>
         </div>
       </section>
+
 
       {/* ── CONTACT FORM ────────────────────────────────────────── */}
       <section id="contact-form" style={{ background: '#E6EDD9' }}>
@@ -750,22 +733,6 @@ export default function PartnersPage() {
           }}
         >
           <FadeUp delay={0}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '16px' }}>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 600,
-                  fontSize: '11px',
-                  letterSpacing: '0.13em',
-                  textTransform: 'uppercase',
-                  color: '#4A5D4A',
-                  margin: 0,
-                  lineHeight: 1,
-                }}
-              >
-                Get In Touch
-              </p>
-            </div>
 
             <h2
               style={{

@@ -29,19 +29,6 @@ export default function PrivacyNoticePage() {
         }}
       >
         {/* Page header */}
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '11px',
-            fontWeight: 600,
-            letterSpacing: '0.13em',
-            textTransform: 'uppercase',
-            color: '#4A5D4A',
-            marginBottom: '16px',
-          }}
-        >
-          Legal
-        </p>
         <h1
           style={{
             fontFamily: 'var(--font-display)',

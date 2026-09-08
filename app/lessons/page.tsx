@@ -56,9 +56,6 @@ export default function LessonsPage() {
           {/* Left: copy */}
           <FadeUp delay={0}>
             <div>
-              <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-                The Curriculum
-              </p>
               <h1
                 style={{
                   fontFamily: 'var(--font-display)',
@@ -148,9 +145,6 @@ export default function LessonsPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              How It Works
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -206,9 +200,6 @@ export default function LessonsPage() {
         >
           <FadeUp delay={0}>
             <div style={{ marginBottom: '56px' }}>
-              <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '14px' }}>
-                Full Curriculum · 10 Units
-              </p>
               <h2
                 style={{
                   fontFamily: 'var(--font-display)',

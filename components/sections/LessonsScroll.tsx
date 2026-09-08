@@ -170,7 +170,6 @@ export default function LessonsScroll() {
     <section className={s.section} data-testid="lessons">
       {/* ── verbatim header from the original LessonsPreview ── */}
       <div className={s.header}>
-        <p className={s.eyebrow}>The Curriculum</p>
         <h2 className={s.h2}>Real topics. Zero condescension.</h2>
         <p className={s.sub}>
           10 units. Each one 8–15 mini lessons, 3–5 minutes long. Built around

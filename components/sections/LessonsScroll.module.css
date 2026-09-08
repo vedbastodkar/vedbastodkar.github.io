@@ -2,12 +2,10 @@
 
 /* overflow:visible overrides global `section{overflow-x:hidden}` so the
    sticky pin works; the inner .sticky clips, so no horizontal scroll. */
-.section { position: relative; background: #E6EDD9; overflow: visible; }
+.section { position: relative; background: #FFFFFF; overflow: visible; }
 
 /* verbatim section header band */
 .header { text-align: center; padding: 84px 24px 8px; max-width: 620px; margin: 0 auto; }
-.eyebrow { font-family: var(--font-body), sans-serif; font-weight: 500; font-size: 11px;
-  letter-spacing: 0.13em; text-transform: uppercase; color: #4A5D4A; margin-bottom: 10px; }
 .h2 { font-family: var(--font-body), sans-serif; font-weight: 700; color: #1A2E1A;
   letter-spacing: -0.02em; line-height: 1.08; font-size: clamp(36px, 4vw, 52px); margin-bottom: 12px; }
 .sub { font-family: var(--font-body), sans-serif; font-size: 15px; line-height: 1.7; color: rgba(26,46,26,0.55); max-width: 480px; margin: 0 auto; }
@@ -71,7 +69,7 @@
   .phonewrap, .stepper, .chip { display: none; }
   .text { min-height: 0; display: flex; flex-direction: column; gap: 20px; }
   .block { position: static; opacity: 1 !important; transform: none !important; pointer-events: auto;
-    background: #F6F8F0; border-radius: 20px; padding: 22px; }
+    background: #E6EDD9; border-radius: 20px; padding: 22px; }
   .block h3 { font-size: 26px; }
 }
 @media (prefers-reduced-motion: reduce) {
@@ -81,5 +79,5 @@
   .phonewrap, .stepper, .chip { display: none; }
   .text { min-height: 0; display: flex; flex-direction: column; gap: 20px; }
   .block { position: static; opacity: 1 !important; transform: none !important; pointer-events: auto;
-    background: #F6F8F0; border-radius: 20px; padding: 22px; }
+    background: #E6EDD9; border-radius: 20px; padding: 22px; }
 }

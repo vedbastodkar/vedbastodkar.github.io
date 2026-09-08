@@ -1,6 +1,6 @@
 /* ── §1 Hero — 3D barrel-loop (mockup-exact geometry + motion) ──── */
 
-.scroll { height: 280vh; position: relative; overflow: visible; }
+.scroll { height: 200vh; position: relative; overflow: visible; }
 
 .stageWrap {
   position: sticky;
@@ -22,10 +22,6 @@
 /* headline block — sits flat on the left */
 .copy { position: absolute; left: 0; top: 70px; max-width: 452px; z-index: 5;
   transform: translateZ(60px); will-change: transform, opacity; }
-.eyebrowRow { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-.eyebrowBar { width: 2px; height: 20px; background: #4A5D4A; flex-shrink: 0; }
-.eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: #4A5D4A; }
-.kicker { font-size: 13px; font-weight: 600; color: rgba(26,46,26,0.4); letter-spacing: 0.04em; margin-bottom: 16px; }
 .h1 { font-family: var(--font-display), Georgia, serif; font-style: italic; font-weight: 700;
   font-size: 50px; line-height: 1.04; letter-spacing: -0.015em; color: #1A2E1A; margin-bottom: 20px; max-width: 452px; }
 .sub { font-size: 15px; line-height: 1.7; color: rgba(26,46,26,0.65); max-width: 430px; margin-bottom: 26px; }
@@ -99,7 +95,7 @@
   .stageWrap { position: static; height: auto; display: block; padding: 128px 24px 72px; perspective: none; overflow: visible; }
   .stage { width: 100%; height: auto; transform: none !important; text-align: center; }
   .copy { position: static; max-width: 520px; margin: 0 auto; transform: none !important; opacity: 1 !important; }
-  .eyebrowRow, .ctas { justify-content: center; }
+  .ctas { justify-content: center; }
   .scene, .cue { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {

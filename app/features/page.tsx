@@ -76,9 +76,6 @@ export default function FeaturesPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              The App
-            </p>
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
@@ -183,9 +180,6 @@ export default function FeaturesPage() {
         >
           {/* Header */}
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#D1A945', marginBottom: '16px' }}>
-              Why All Three
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',

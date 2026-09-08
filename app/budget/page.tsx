@@ -109,9 +109,6 @@ export default function BudgetingPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              Budgeting
-            </p>
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
@@ -166,9 +163,6 @@ export default function BudgetingPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              What&apos;s Inside
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -223,9 +217,6 @@ export default function BudgetingPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              The System
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -325,9 +316,6 @@ export default function BudgetingPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              Key Metrics
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -387,9 +375,6 @@ export default function BudgetingPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#D1A945', marginBottom: '16px' }}>
-              Financial Pulse Hub
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',

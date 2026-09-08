@@ -100,13 +100,8 @@ export default function Hero3D() {
       <div className={s.stageWrap}>
         <div className={s.stage}>
 
-          {/* ── Left: verbatim hero copy ── */}
+          {/* ── Left: hero copy — opens straight on the headline ── */}
           <div className={s.copy} ref={copyRef}>
-            <div className={s.eyebrowRow}>
-              <div className={s.eyebrowBar} />
-              <span className={s.eyebrow}>Personal Finance · Built for Teens</span>
-            </div>
-            <p className={s.kicker}>Know Your Dough.</p>
             <h1 className={s.h1}>The money stuff school forgot to teach you.</h1>
             <p className={s.sub}>
               Bite-sized lessons on pay stubs, credit, and taxes. A budget
@@ -118,7 +113,7 @@ export default function Hero3D() {
                 Start Learning Free →
               </a>
             </div>
-            <p className={s.micro}>Free to start · No credit card</p>
+            <p className={s.micro}>501(c)(3) nonprofit · Free for students</p>
           </div>
 
           {/* ── Right: 3D scene ── */}

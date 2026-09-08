@@ -290,7 +290,6 @@ export default function ApplyPage() {
       <section id="roles" style={{ background: '#E6EDD9' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '88px 24px' }}>
           <FadeUp>
-            <p style={{ ...eyebrow, marginBottom: '14px' }}>Open positions</p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',

@@ -1,14 +1,15 @@
 // ── TEMPORARY recruiting strip (homepage) ─────────────────────────
 // Runs while team applications are open. To pull it down: delete the
 // <JoinTeamStrip /> line in app/page.tsx (the /apply page and the nav chip
-// stay). Sits between Partners (bgSage) and FinalCTA (dark), so it is white.
+// stay). Sits between the dark Partnership section and the dark FinalCTA,
+// so it is sage.
 import Link from 'next/link'
 import FadeUp from '@/app/components/FadeUp'
 import { APPLY_FORM_URL } from '@/lib/links'
 
 export default function JoinTeamStrip() {
   return (
-    <section style={{ background: '#FFFFFF' }} data-testid="join-team">
+    <section style={{ background: '#E6EDD9' }} data-testid="join-team">
       <div
         className="join-team-inner"
         style={{

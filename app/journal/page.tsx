@@ -120,9 +120,6 @@ export default function JournalPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              Journal
-            </p>
             <h1
               style={{
                 fontFamily: 'var(--font-display)',
@@ -188,9 +185,6 @@ export default function JournalPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#D1A945', marginBottom: '16px' }}>
-              Why It Matters
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -256,9 +250,6 @@ export default function JournalPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.13em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              How It Works
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -313,9 +304,6 @@ export default function JournalPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#4A5D4A', marginBottom: '16px' }}>
-              Focus Themes
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -379,9 +367,6 @@ export default function JournalPage() {
           }}
         >
           <FadeUp delay={0}>
-            <p style={{ fontFamily: 'var(--font-body)', fontWeight: 600, fontSize: '11px', letterSpacing: '0.14em', textTransform: 'uppercase', color: '#D1A945', marginBottom: '16px' }}>
-              Example Prompts
-            </p>
             <h2
               style={{
                 fontFamily: 'var(--font-display)',

@@ -17,9 +17,20 @@ interface WordRevealProps {
   headlineIndex?: number
   // Bottom margin (px) after each line — defaults to uniform 20px
   gaps?: number[]
+  // Sub-line colour. Defaults to the light-background tone; pass a light
+  // value when the section sits on textTitle (#1A2E1A).
+  subColor?: string
+  // Headline-line colour when the reveal is used on a dark section.
+  headlineColor?: string
 }
 
-export default function WordReveal({ lines, headlineIndex, gaps }: WordRevealProps) {
+export default function WordReveal({
+  lines,
+  headlineIndex,
+  gaps,
+  subColor = 'rgba(26,46,26,0.75)',
+  headlineColor,
+}: WordRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -63,13 +74,13 @@ export default function WordReveal({ lines, headlineIndex, gaps }: WordRevealPro
             key={i}
             className={
               isHeadline
-                ? 'font-display italic font-bold text-textTitle tracking-[-0.02em] leading-[1.08]'
+                ? 'font-display italic font-bold tracking-[-0.02em] leading-[1.08]'
                 : 'word-reveal-sub font-body font-normal leading-snug'
             }
             style={
               isHeadline
-                ? { fontSize: 'clamp(36px, 4vw, 52px)', marginBottom: mb }
-                : { fontSize: 'clamp(22px, 2.8vw, 36px)', color: 'rgba(26,46,26,0.75)', marginBottom: mb }
+                ? { fontSize: 'clamp(36px, 4vw, 52px)', color: headlineColor ?? '#1A2E1A', marginBottom: mb }
+                : { fontSize: 'clamp(22px, 2.8vw, 36px)', color: subColor, marginBottom: mb }
             }
           >
             {line.split(' ').map((word, j, arr) => (
